@@ -1,0 +1,98 @@
+/* header  */
+
+header {
+    padding: 20px 35px;
+    width: 100%;
+    background-color: #0e0a25;
+  }
+
+  header h1 {
+    font-weight: bold;
+    font-size: 36px;
+    color: #0e0a25;
+    margin: 0;
+    display: inline;
+  }
+
+  header a {
+    text-decoration: none;
+    color: goldenrod;
+}
+
+  header a h3 {
+    text-decoration: none;
+    color: grey;
+  }
+
+
+  header nav {
+    float: right;
+    margin: 7px 0;
+  }
+
+
+  header nav ul li {
+    display: inline;
+  }
+
+  header nav ul li a {
+    margin: 0 30px;
+    font-weight: lighter;
+    font-size: 22px;
+    background-color: lightblue;
+  }
+
+  h2 {
+    font-weight: bold;
+    color: grey;
+  }
+
+  h3 {
+    font-weight: bold;
+    color: grey;
+    font-size: 20px;
+  }
+
+  h4 {
+    font-weight: lighter;
+    color: grey
+  }
+
+  /* footer  */
+
+  footer {
+    background:#0e0a25;;
+    width: 100%;
+    color: goldenrod;
+    padding: 40px 35px;
+  }
+
+  footer h2 {
+    display: inline;
+    color: #024e76;
+    font-size: 30px;
+    margin: 0;
+  }
+
+  footer div {
+    float: right;
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  footer a {
+    color: #024e76;
+  }
+
+
+  /* nav bar - to offset your content [kt]*/
+  /* header, main, footer {
+    padding-left: 300px;
+  }
+
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  } */
+      
