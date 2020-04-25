@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel='icon' href="favicon.ico" type='image/x-icon' />
     <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet"> -->
-    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
     <title>JAK-eats</title>       
 </head>
 <body>
 
-      <header>
+  <header>
       <h1>
           <a href="./index.html">JAK Eats</a> 
       </h1> 
-      <h3><a href="#menu">food menu and</a> <a href="#map">map</a></h3>
+      <h3><a href="#menu">food menu |</a> <a href="#map"> eatery nearby</a></h3>
   </header>
 
 <!-- side nav, for more info https://materializecss.com/sidenav.html  -->
 
-
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+        <a href="#user"><img class="circle" src="assets/images/cooking-dishes-herb-kitchen-1109197.jpg"></a>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div>
+    </li>
+    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+    <li><a href="#!">Second Link</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Subheader</a></li>
+    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+  </ul>
+<!-- anchor that initializes the side nav bar  -->
+<br>
+<br>
+  <a href="#" data-target="slide-out" class="sidenav-trigger">
+      <i class="material-icons">
+        CLICK HERE TO START THE SIDE NAV BAR
+      </i>
+  </a>      
+<br>
+<br>
 
 <!-- center panel  -->
 
@@ -28,25 +55,27 @@
  <!-- Parallax div, for more info https://materializecss.com/parallax.html  -->
 
  <div class="parallax-container">
-    <div class="parallax">
-      <img src="./assets/images/pepperoni-pizza-with-basil-leaves-1260968.jpg" alt="" class="responsive-img">
-    </div>
+      <div class="parallax">
+        <img src="./assets/images/pepperoni-pizza-with-basil-leaves-1260968.jpg" alt="" class="responsive-img">
+      </div>
   </div>
   <div class="section white">
-    <div class="row container">
-      <h2 class="header" id="menu">Find your menu tonight!</h2>
-      <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, illo dicta. Culpa repellendus laborum non quaerat molestias sed nemo soluta eum doloribus ratione consectetur, porro perferendis provident maiores? Dolores, nobis..</p>
-    </div>
-     <div class="parallax-container">
-      <div class="parallax">
-        <img src="./assets/images/bakery-baking-cake-chocolate-264892.jpg" alt="" class="responsive-img">
+      <div class="row container">
+        <h2 class="header" id="menu">Find your menu tonight!</h2>
+        <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, illo dicta. Culpa repellendus laborum non quaerat molestias sed nemo soluta eum doloribus ratione consectetur, porro perferendis provident maiores? Dolores, nobis..</p>
       </div>
+  </div>
+
+  <div class="parallax-container">
+        <div class="parallax">
+          <img src="./assets/images/bakery-baking-cake-chocolate-264892.jpg" alt="" class="responsive-img">
+        </div>
     </div>
     <div class="section white">
-      <div class="row container">
-        <h2 class="header" id="map">Map to food</h2>
-        <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate est alias saepe a numquam, nobis autem temporibus cumque illum laborum harum tempora ipsam laudantium. Vero rerum nam quo ad fugit!</p>
-      </div>
+        <div class="row container">
+          <h2 class="header" id="map">Map to food</h2>
+          <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate est alias saepe a numquam, nobis autem temporibus cumque illum laborum harum tempora ipsam laudantium. Vero rerum nam quo ad fugit!</p>
+        </div>
     </div>
 
 
@@ -61,10 +90,9 @@
       &copy; 2020 JAK Eats, Inc.
     </div>
 </footer>
-
+   
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="./assets/js/materialize.js"></script>
       <script src="./assets/js/script.js"></script>
 </body>
 </html>

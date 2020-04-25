@@ -1,29 +1,31 @@
 /* header  */
 
-header {
+header {    
     padding: 20px 35px;
     width: 100%;
-    background-color: #0e0a25;
+    background-color: #ecf4f3;
   }
 
   header h1 {
     font-weight: bold;
+    font-style: oblique;
     font-size: 36px;
-    color: #0e0a25;
+    color: #ecf4f3;
     margin: 0;
     display: inline;
   }
 
   header a {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
-    color: goldenrod;
+    color: #010a43; 
 }
 
   header a h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
-    color: grey;
+    color: #010a43; 
   }
-
 
   header nav {
     float: right;
@@ -39,37 +41,45 @@ header {
     margin: 0 30px;
     font-weight: lighter;
     font-size: 22px;
-    background-color: lightblue;
+    background-color: #445c3c    
   }
 
   h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: grey;
-  }
+    color: #010a43; 
+    font-size: 36px;
+    }
 
   h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: grey;
+    color: #010a43; 
     font-size: 20px;
   }
 
   h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: bold;
     font-weight: lighter;
-    color: grey
-  }
+    color: #010a43; 
+    }
 
   /* footer  */
 
   footer {
-    background:#0e0a25;;
+    background-color: #ecf4f3;
     width: 100%;
-    color: goldenrod;
+    color: #010a43; 
     padding: 40px 35px;
+    font-style: bold;
   }
 
   footer h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: bold;
     display: inline;
-    color: #024e76;
+    color: #010a43; 
     font-size: 30px;
     margin: 0;
   }
@@ -81,18 +91,12 @@ header {
   }
 
   footer a {
-    color: #024e76;
+    background-color: #ecf4f3;
   }
 
 
-  /* nav bar - to offset your content [kt]*/
-  /* header, main, footer {
-    padding-left: 300px;
-  }
-
-  @media only screen and (max-width : 992px) {
-    header, main, footer {
-      padding-left: 0;
-    }
-  } */
-      
+/* parallax required - added here [kt] */
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+}

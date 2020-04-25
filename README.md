@@ -8,6 +8,8 @@ Online menu and restaurant options, with mapping to nearby eateries.
 * JavaScript
 * HTML
 * CSS
+* Materialize CSS, HTML, JS
+* jQuery
 
 ## Site and Repo location
 
