@@ -3,16 +3,18 @@
 header {    
     padding: 20px 35px;
     width: 100%;
-    background-color: #ecf4f3;
+    background-color: white;
+    text-align: center;
   }
 
   header h1 {
     font-weight: bold;
     font-style: oblique;
-    font-size: 36px;
-    color: #ecf4f3;
+    font-size: 40px;
+    color: white;
     margin: 0;
     display: inline;
+    
   }
 
   header a {
@@ -45,10 +47,11 @@ header {
   }
 
   h2 {
+    margin: 0 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
     color: #010a43; 
-    font-size: 36px;
+    font-size: 26px;
     }
 
   h3 {
@@ -62,13 +65,14 @@ header {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: bold;
     font-weight: lighter;
+    text-align: center;
     color: #010a43; 
     }
 
   /* footer  */
 
   footer {
-    background-color: #ecf4f3;
+    background-color: white;
     width: 100%;
     color: #010a43; 
     padding: 40px 35px;
@@ -91,7 +95,7 @@ header {
   }
 
   footer a {
-    background-color: #ecf4f3;
+    background-color: white;
   }
 
 
@@ -100,3 +104,34 @@ header {
   min-height: 400px;
   background: transparent;
 }
+
+/* padding required for other panes with side nav in place */
+
+header, main, footer {
+  padding-left: 300px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+/* main content  */
+
+h2 {
+  text-align: left;
+}
+p {
+  text-align: left;
+  margin: 5%;
+} 
+
+/* side navbar  */
+
+.user-view {
+  background-color: white;
+  padding-left: 10;
+  text-align: center;
+}
+
