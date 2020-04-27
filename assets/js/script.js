@@ -1,11 +1,27 @@
+//submit clicks
+function redirectToSearch() {     
+  window.location.href = "search.html";  //relative path
+}
+
 //parallax initialization
   $(document).ready(function(){
     $('.parallax').parallax();
     $('.sidenav').sidenav();
     $('select').formSelect();
+    $('input#input_text, textarea#textarea2').characterCounter();
   });
 
+  // input - reg
 
+  // $(document).ready(function() {
+  //   M.updateTextFields();
+  // });
+
+  // //  init with char count 
+  // $(document).ready(function() {
+  //   $('input#input_text, textarea#textarea2').characterCounter();
+  // });
+        
 //parallax method
 // var instance = M.Parallax.getInstance(elem);
 

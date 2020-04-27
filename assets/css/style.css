@@ -1,3 +1,27 @@
+*{
+  margin: 5;
+  padding: 2;
+  box-sizing: border-box;
+}
+
+/* padding required for other panes with side nav in place */
+
+header, main, footer {
+  padding-left: 200px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: white;  
+  color: #010a43;  
+}
 /* header  */
 
 header {    
@@ -5,6 +29,7 @@ header {
     width: 100%;
     background-color: white;
     text-align: center;
+    background: "./assets/images/bakery-baking-cake-chocolate-264892.jpg"
   }
 
   header h1 {
@@ -55,8 +80,7 @@ header {
 
   h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;n
-
+    font-weight: bold;
     color: #010a43; 
     font-size: 20px;
   }
@@ -67,7 +91,22 @@ header {
     font-weight: bold;
     text-align: center;
     color: #010a43; 
-    }
+  }
+
+/* main content  */
+
+section {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+p {
+  text-align: center;
+  margin: 5%;
+} 
+
 
 /* side nav anchor \ trigger  */
 .sidenav-trigger {
@@ -76,13 +115,56 @@ header {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 25px;
   text-align: center;
-  color: black;
+  color: #010a43;
 }
+
+.sidenav h4 {
+  text-align: center;
+}
+
+.navbar ul h4{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #010a43;  
+  font-style: bolder;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+.navbar .row .input_text {
+  text-align: center;
+}
+
+.navbar .leftintro {
+  color: #010a43; 
+}
+
+.navbar .ul .id {
+  margin: 50px;
+}
+
+.user-view {
+  background-color: white;
+  padding-left: 10;
+  text-align: center;
+}
+
 
 
 /* buttons  */
 
+.btn {
+  background-color: burlywood;
 
+}
+
+.menuResultsv {
+  text-align: center;
+}
+
+.locationResultsv {
+  text-align: center;
+}
 
 
   /* footer  */
@@ -105,9 +187,10 @@ header {
   }
 
   footer div {
-    float: right;
+    float: center;
+    color: green;
     line-height: 1.5;
-    text-align: right;
+    text-align: center;
   }
 
   footer a {
@@ -116,38 +199,7 @@ header {
 
 
 /* parallax required - added here [kt] */
-.parallax-window {
-  min-height: 400px;
+/* .parallax-window {
+  min-height: 50px;
   background: transparent;
-}
-
-/* padding required for other panes with side nav in place */
-
-header, main, footer {
-  padding-left: 300px;
-}
-
-@media only screen and (max-width : 992px) {
-  header, main, footer {
-    padding-left: 0;
-  }
-}
-
-/* main content  */
-
-h2 {
-  text-align: left;
-}
-p {
-  text-align: left;
-  margin: 5%;
-} 
-
-/* side navbar  */
-
-.user-view {
-  background-color: white;
-  padding-left: 10;
-  text-align: center;
-}
-
+} */

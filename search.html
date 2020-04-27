@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel='icon' href="favicon.ico" type='image/x-icon' />
+    <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
+    <title>JAK-eats</title>       
+</head>
+<body>
+
+  <header class="header">
+      <h1>
+          <a href="./index.html">JAK Eats</a> 
+      </h1> 
+      <h3><a href="#menu">food menu |</a> <a href="#map"> eatery nearby</a></h3>
+  </header>
+  
+                      <!-- Version: side nav w/ parallax version -->
+
+<!-- side nav bar part 2, for more info https://materializecss.com/sidenav.html  -->
+<section class="navbar"> 
+
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+        <h4>JAK Eats</h4>
+          <!-- circular img  -->
+          <li><div class="user-view">
+              <div class="background">
+              <img src="assets/images/cooking-dishes-herb-kitchen-1109197.jpg">
+            </div>
+              <img class="circle" src="assets/images/cooking-dishes-herb-kitchen-1109197.jpg"></a>
+            </div>
+            <h5><small>Enter a food details here:</small></h5>
+          </li>
+
+          <div class="divider"></div>
+
+          <!-- select button more info https://materializecss.com/select.html  -->
+          <div class="input-field col s12">
+            <h5><small>1. Special diet preference</small></h5>
+            <select multiple>
+              <option value="" disabled selected>select one</option>
+              <option value="1">Any</option>
+              <option value="2">Vegetarian</option>
+              <option value="3">Gluten-Free</option>
+            </select>
+            <label></label>
+          </div>
+                <br>
+          <!-- input with character count more info https://materializecss.com/text-inputs.html-->
+          <h5><small>2. What do you want to eat?</small></h5>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s6">
+                  <input id="input_text" type="text" data-length="10">
+                  <label for="input_text">food name</label>
+                </div>
+              </div>      
+            </form>
+          </div>          
+          <!-- submit , more info https://materializecss.com/buttons.html -->
+          <button class="btn waves-effect waves-light" type="submit" name="action">Find food!
+            <i class="material-icons right">send</i>
+          </button>
+    </ul>  
+  <!-- side nav anchor  -->
+  <!-- <a href="#" data-target="slide-out" class="sidenav-fixed"><i class="material-icons"> START HERE</i></a> -->
+
+</section>
+
+
+
+<!-- center panel  -->
+
+<div class="menuResults">
+    <h5><small>Menu options per your selection:</small></h5>
+    <div class="row">
+        <div class="grid-example col s12 m6"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+        <br>
+        <div class="grid-example col s12 m6"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+        <br>
+        <div class="grid-example col s12 m6"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+        <br>
+        <div class="grid-example col s12 m6"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+        <br>
+        <div class="grid-example col s12 m6"><span class="flow-text">I am full-width on mobile (col s12 m6)</span></div>
+      </div>
+</section>
+        <br>
+        <br>
+<section id="locationResults">
+    <h5><small>Restaruant locations near you:</small></h5>
+    <div class="row">       
+        <div class="grid-example col s12 m6"><h5><small>Closest:</small></h5><span class="flow-text">location 1</span></div>      
+        <br>
+        <div class="grid-example col s12 m6"><h5><small>Second Closest</small></h5><span class="flow-text">location 2</span></div>
+    </div> 
+</section>
+
+
+<!-- footer  -->
+<footer>
+    <div>
+      &copy; 2020 JAK Eats, Inc.
+    </div>
+</footer>
+   
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="./assets/js/script.js"></script>
+</body>
+</html>
