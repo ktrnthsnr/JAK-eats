@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel='icon' href="favicon.ico" type='image/x-icon' />
-    <!-- <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
@@ -14,10 +14,8 @@
 <body>
 
   <header class="header">
-      <h1>
-          <a href="./index.html">JAK Eats</a> 
-      </h1> 
-      <h3><a href="#menu">food menu |</a> <a href="#map"> eatery nearby</a></h3>
+    <div><h1><a href="./index.html">JAK Eats</a> </h1> </div>
+    <div><h3> <a href="#findMenu">food menu |</a> <a href="#map"> eatery nearby</a> </h3></div>
   </header>
   
                       <!-- Version: side nav w/ parallax version -->
@@ -33,6 +31,10 @@
                 <button class="btn waves-effect waves-light" type="submit" name="action" onclick="redirectToSearch()"> Start here!
                     <i class="material-icons right">send</i>
                 </button>
+                <br>
+
+                <br>
+                <br>
                 <br>
                 <h5 class="header" id="menu">Menu options</h5>  
                 <li>American comfort food</li>
@@ -67,7 +69,7 @@
   <div class="section white">
     <div class="row container">
       <a class="btn-floating btn-large waves-effect waves-light red" onclick="redirectToSearch()"><i class="material-icons">local_dining</i></a> 
-        <h2 class="header" id="menu">Find your menu!</h2> 
+        <h2 class="header" id="findMenu">Find your menu!</h2> 
         <p>Choose from a variety of menus, from American, Mexican, Indian, Chinese foods to vegetarian or gluten-free, or other food selections.</p>
         <!-- <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, illo dicta. Culpa repellendus laborum non quaerat molestias sed nemo soluta eum doloribus ratione consectetur, porro perferendis provident maiores? Dolores, nobis..</p> -->
       </div>

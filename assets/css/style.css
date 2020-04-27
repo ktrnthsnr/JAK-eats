@@ -2,6 +2,7 @@
   margin: 5;
   padding: 2;
   box-sizing: border-box;
+  font-family: 'Lobster', 
 }
 
 /* padding required for other panes with side nav in place */
@@ -29,19 +30,21 @@ header {
     width: 100%;
     background-color: white;
     text-align: center;
-    background: "./assets/images/bakery-baking-cake-chocolate-264892.jpg"
+    /* background-image: url("../images/flat-lay-photography-of-vegetable-salad-on-plate-1640777.jpg"); */
   }
 
-  header h1 {
+h1 {
+    font-family: 'Lobster', cursive;
     font-weight: bold;
-    font-size: 40px;
     color: white;
     margin: 0;
-    display: inline;
+    display: inline;   
+    font-size: 48px;
+    text-shadow: 4px 4px 4px #aaa;
     
   }
 
-  header a {
+header a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
     color: #010a43; 
@@ -53,13 +56,13 @@ header {
     color: #010a43; 
   }
 
-  header nav {
+  /* header nav {
     float: right;
     margin: 7px 0;
-  }
+  } */
 
 
-  header nav ul li {
+  /* header nav ul li {
     display: inline;
   }
 
@@ -68,7 +71,7 @@ header {
     font-weight: lighter;
     font-size: 22px;
     background-color: #445c3c    
-  }
+  } */
 
   h2 {
     margin: 0 30px;
@@ -118,6 +121,12 @@ p {
   color: #010a43;
 }
 
+.sidenav {
+  border-color: brown;
+  border-width: 10px;
+  /* background-image: url("../images/white-and-brown-cooked-dish-on-white-ceramic-bowls-958545.jpg"); */
+}
+
 .sidenav h4 {
   text-align: center;
 }
@@ -154,8 +163,22 @@ p {
 /* buttons  */
 
 .btn {
-  background-color: burlywood;
+  background-color: #c70039;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
 
+.onHover:hover {
+  background-color: olivedrab;
+  transition: 2s;
+  width: 100%;
+}
+.onHover {
+  background-color: olive;
+  border-radius: 11px;
+  width: 100%;
 }
 
 .menuResultsv {
@@ -166,6 +189,21 @@ p {
   text-align: center;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: grey;
+  padding: 10px;
+  /* grid-column-gap: 5px;
+  grid-row-gap: 10px; */
+}
+.grid-item {
+  background-color: white;
+  border: 1px solid grey;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
 
   /* footer  */
 
@@ -175,6 +213,7 @@ p {
     color: #010a43; 
     padding: 40px 35px;
     font-style: bold;
+    /* background-image: url("../images/flat-lay-photography-of-vegetable-salad-on-plate-1640777.jpg"); */
   }
 
   footer h2 {
@@ -203,3 +242,9 @@ p {
   min-height: 50px;
   background: transparent;
 } */
+
+.rectangle {
+  height: 40px;
+  width: 101px;
+  background-color: grey
+}
