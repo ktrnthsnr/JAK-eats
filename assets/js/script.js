@@ -1,4 +1,7 @@
-//submit clicks
+var myKey = theKey.apiKey;
+
+
+//submit onclick in multiple pages (need localStorage in place for input and selects)
 function redirectToSearch() {     
   // window.location.href = "search.html";  
   window.location.href = "index.html";   //updated to same page. Will add\remove div's rather than go through multiple pages.

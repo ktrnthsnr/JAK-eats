@@ -8,12 +8,12 @@
 /* padding required for other panes with side nav in place */
 
 
-    header, .navbar, footer {
+    header, .main, footer {
       padding-left: 10%;
     }
 
     @media only screen and (max-width : 992px) {
-      header, .navbar, footer {
+      header, .main, footer {
         padding-left: 0;
       }
     } 
