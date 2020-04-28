@@ -193,7 +193,7 @@ p {
 }
 
 .onHover:hover {
-  background-color: olivedrab;
+  background-color: grey;
   transition: 2s;
   width: 100%;
 }
@@ -205,17 +205,17 @@ p {
 
 .menuResults {
   /* text-align: center; */
-  margin-left: 10%;
+  margin-left: 0%;
 }
 
-.menuResults  h3{
-  text-align: center;
-  margin-left: 0%;
+.menuResults h3 {
+  text-align: left;
+  margin-left: 35%;
 }
 
 .locationResults {
   /* text-align: left; */
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 .locationResults h3 {
