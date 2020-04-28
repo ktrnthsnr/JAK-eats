@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoonacular connection test</title>
+    <!-- <link type="text/css" rel="stylesheet" href="./assets/css/style.css" /> -->
+</head>
+<body>
+
+<header>
+    <h4>Spoonacular connection test</h4>
+</header>
+
+<h5><small>enter the word capital Nutrition as an example</small></h5>
+<!-- input, request info from the user  -->
+<div class="input">
+    <input type= "text" class="inputValue" placeholder="Enter food?"> 
+    <input type= "submit" class="button" value="Submit">        
+</div>
+
+<!-- output, display response per value defined  -->
+<div class="display">
+    <p class="nameID">(food name will display here)</p>
+</div>
+
+
+<script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
+<!-- <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+            <!-- add config.js file After the jQuery, but Before your own script.js -->
+<script type='text/javascript' src='config.js'></script>   
+<!-- <script type='text/javascript' src="./assets/js/script.js"></script> -->
+
+<script> 
+
+            //hide the API key
+            var myKey = theKey.apiKey;
+                    //display the key to validate config.js is referencing correctly
+                    console.log(myKey);
+
+            
+            // test connection via JavaScript            
+                // * variables
+                var button = document.querySelector('.button');
+                var inputValue = document.querySelector('.inputValue');
+                var nameH = document.querySelector('.nameID');
+                // var myKey = '<insert API Key>';
+                
+
+                // * button event listener
+                button.addEventListener('click', function(){                   
+                    //fetch JSON data, test
+                    //goal response URL
+                        //https://api.spoonacular.com/recipes/716429/information?apiKey=<insert API key here>&includeNutrition=true 
+                    //works
+                        //fetch('https://api.spoonacular.com/recipes/716429/information?apiKey=' + myKey + '&includeNutrition=true')
+                    fetch('https://api.spoonacular.com/recipes/716429/information?apiKey=' + myKey + '&include' + inputValue.value + '=true')
+                    // compare with weather api
+                        // fetch('https://api.openweathermap.org/data/2.5/weather?q=' + inputValue.value + '&units=imperial&APPID=<insert API Key here>')
+
+                    .then(response => response.json())
+                    .then(data => {
+                            //JSON data parameters
+                            var nameValue = data.title;
+                            //HTML ID associating to the JSON values
+                            nameH.innerHTML = nameValue;
+                    })
+                    .catch(err => alert("Incorrect search."))
+                })
+                
+                
+
+
+            // another test connection via jQuery   (need the code.jquery.com script element and URL before this script info. No HTML elements are required.           
+            // jQuery.getJSON("https://api.spoonacular.com/recipes/random?number=1&apiKey=<insertAPIkey>", function(data){
+            //     console.log(data);
+            // });
+
+            // URL test https://api.spoonacular.com/recipes/716429/information?apiKey=<insertAPIKey>&includeNutrition=true
+
+</script>
+
+</body>
+</html>
