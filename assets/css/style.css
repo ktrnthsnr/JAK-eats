@@ -3,13 +3,11 @@
   padding: 5px;
   box-sizing: border-box;
   font-family: 'Lobster', 
-  /* Drkeck  */
-  /* #food-search, .input-field {       
+    /* #food-search, .input-field {       
     margin: 25px 0; */
 }
 
 /* padding required for other panes with side nav in place */
-
 
     header, .navbar, footer {
       padding-left: 10%;
@@ -56,8 +54,7 @@ h1 {
     margin: 0;
     display: inline;   
     font-size: 48px;
-    text-shadow: 4px 4px 4px #aaa;
-    
+    text-shadow: 4px 4px 4px #aaa;    
   }
 
 header a {
@@ -66,30 +63,13 @@ header a {
     color: #010a43; 
 }
 
-  header a h3 {
+header a h3 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-decoration: none;
     color: #010a43; 
   }
 
-  /* header nav {
-    float: right;
-    margin: 7px 0;
-  } */
-
-
-  /* header nav ul li {
-    display: inline;
-  }
-
-  header nav ul li a {
-    margin: 0 30px;
-    font-weight: lighter;
-    font-size: 22px;
-    background-color: #445c3c    
-  } */
-
-  h2 {
+h2 {
     margin: 0 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -167,14 +147,6 @@ p {
         border-width: 10px;
       }
 
-      /* .sidenav h4 {
-        text-align: center;
-        font-size: 15px;
-      } */
-      /* .sidenav h5 {
-        text-align: left;
-      } */
-
       .user-view {
         background-color: white;
         padding-left: 10;
@@ -207,7 +179,6 @@ p {
 }
 
 .menuResults {
-  /* text-align: center; */
   margin-left: 0%;
 }
 
@@ -217,7 +188,6 @@ p {
 }
 
 .locationResults {
-  /* text-align: left; */
   margin-left: 10%;
 }
 
@@ -226,113 +196,74 @@ p {
   margin-left: 20%;
 }
 
-/* side nav bar option 2  */
-        
-        /* .sidenav {
-          height: 100%;
-          width: 200px;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          left: 0;
-          color: black;
-          background-color: white;
-          overflow-x: hidden;
-          padding-top: 20px;
-        }
 
-        .sidenav a {
-          padding: 6px 6px 6px 32px;
-          text-decoration: none;
-          font-size: 25px;
-          color: black;
-          display: block;
-        }
-
-        .sidenav a:hover {
-          color: grey;
-        }
-
-        .main {
-          margin-left: 200px; 
-        }
-
-        @media screen and (max-height: 450px) {
-          .sidenav {padding-top: 15px;}
-          .sidenav a {font-size: 18px;}
-        }
-        */
-
-
-
-/* corresponds with 2nd sid nav option  */
-      /* .main {
-        margin-left: 0px;
-      } */
-
-      /* main content  */
-
-      /* .content {
-        padding-left: 20%;
-        margin: 40% 0 10% 0;
-      } */
-
-      .grid-container-fluid {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: white;
-        padding-left: 15%;
-        z-index: 2;
-        /* margin: 40% 0 10% 0; */
-        /* grid-column-gap: 5px;
-        grid-row-gap: 10px; */
-      }
-      .grid-item {
-        background-color: white;
-        border: 30px solid grey;
-        grid-auto-flow: row;
-        padding: 10px;
-        font-size: 30px;
-        text-align: center;
-      }
+.grid-container-fluid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: white;
+  padding-left: 15%;
+  z-index: 2;
+  /* margin: 40% 0 10% 0; */
+  /* grid-column-gap: 5px;
+  grid-row-gap: 10px; */
+}
+.grid-item {
+  background-color: white;
+  border: 30px solid grey;
+  grid-auto-flow: row;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+}
 
       
-  /* footer  */
+/* footer  */
 
-  footer {
-    background-color: white;
-    width: 100%;
-    color: #010a43; 
-    /* padding: 40px 35px; */
-    padding-left: 0%;
-    padding-top: 10%;
-    font-style: bold;
-    text-align: center;
-    /* background-image: url("../images/flat-lay-photography-of-vegetable-salad-on-plate-1640777.jpg"); */
-  }
+footer {
+  background-color: white;
+  width: 100%;
+  color: #010a43; 
+  /* padding: 40px 35px; */
+  padding-left: 0%;
+  padding-top: 10%;
+  font-style: bold;
+  text-align: center;
+  /* background-image: url("../images/flat-lay-photography-of-vegetable-salad-on-plate-1640777.jpg"); */
+}
 
-  footer h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: bold;
-    text-align: center;
-    display: inline;
-    color: #010a43; 
-    font-size: 30px;
-    margin: 0;
-  }
+footer h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: bold;
+  text-align: center;
+  display: inline;
+  color: #010a43; 
+  font-size: 30px;
+  margin: 0;
+}
 
-  footer div {
-    color: green;
-    line-height: 1.5;
-    text-align: center;
-  }
+footer div {
+  color: green;
+  line-height: 1.5;
+  text-align: center;
+}
 
-  footer a {
-    background-color: white;
-  }
+footer a {
+  background-color: white;
+}
 
 
 /* .parallax-window {
   min-height: 50px;
   background: transparent;
 } */
+
+
+/* ------------------GOOGLE MAPS API-------------------*/
+
+#GoogleMap {
+  height: 900px;
+  width: 75%;
+  float: right;
+  border: crimson solid 5px;
+}
+

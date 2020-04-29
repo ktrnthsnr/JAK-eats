@@ -1,5 +1,5 @@
 
-// Katarina - ktrnthsnr's section 
+// ktrnthsnr's section 
 
 //submit clicks
 function redirectOnClick() {     
@@ -15,12 +15,14 @@ function redirectOnClick() {
     $('input#input_text, textarea#textarea2').characterCounter();
   });
 
-  // Alex - Drkeck's section (see scriptA.js)
+
+
+  // Drkeck's food menu fetch Javascript section (see scriptA.js)
 
 
 
 
-  //Josh's section - Pops (see scriptJ.js)
+  // Pops08's location mapping Javascript section - Pops08 (see scriptJ.js)
 
 
 

@@ -1,7 +1,7 @@
-﻿# JAK-eats
+﻿# JAK Eats
 
 ## Description
-Online menu and restaurant options, with mapping to nearby eateries.
+Online menu and restaurant options, with mapping to nearby restaurants.
 
 ## Built With
 * JavaScript, jQuery
@@ -34,7 +34,7 @@ Pops08, Drkeck, ktrnthsnr
 
 
 ## Token info
-Note the API key is not included in this version. 
-If cloning to your local directory, create a config.js in the root, then add this for each key:
+Note the API keys are not included in this version. 
+If cloning to your local directory, create a config.js in the root, then add this var for each key:
    var theKey = {
      apiKey : 'apiKey=INSERTAPIKEYHERE',}
