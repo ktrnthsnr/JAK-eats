@@ -24,7 +24,7 @@ Pops08, Drkeck, ktrnthsnr
 ### ©️2020 Pops08, ktrnthsnr, Drkeck
 
 ## Screenshot of the site splash page
-![Mockup](./assets/images/JAK-eats-site.JPG "JAK-eats-splashpage")
+![Mockup](assets\images\JAK-eats-site.jpg "JAK-eats-splashpage")
 
 ## Screenshot of the site results from first API
 ![Mockup](./assets/images/JAK-eats-site_results.jpg "JAK-eats-results-food")
