@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel='icon' href="favicon.ico" type='image/x-icon' />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/style.css" />
+    <title>JAK-eats</title>       
+</head>
+<body>
+
+  <header class="header">
+    <div><h1><a href="./index.html">JAK Eats</a> </h1> </div>
+    <div><h3> <a href="#findMenu">food menu |</a> <a href="#map"> eatery nearby</a> </h3></div>
+  </header>
+  
+                      <!-- Version: side nav w/ parallax version -->
+
+
+<!-- side nav option 2  -->
+  <!-- for more info https://materializecss.com/sidenav.html  --> 
+  <!-- select button more info https://materializecss.com/select.html  -->
+  <!-- input with character count more info https://materializecss.com/text-inputs.html-->
+  <!-- submit , more info https://materializecss.com/buttons.html -->
+
+<section class= "navbar"> 
+    <!-- <ul id="slide-out" class="sidenav sidenav-fixed"> -->
+    <ul id="slide-out" class="sidenav sidenav-fixed">
+          <!-- <h4>JAK Eats</h4> -->
+            <li><div class="user-view">
+                  <div class="background">            
+                      <img src="assets/images/cooking-dishes-herb-kitchen-1109197.jpg">
+                  </div>
+                  <img class="circle" src="assets/images/cooking-dishes-herb-kitchen-1109197.jpg"></a>
+              </div>
+              <h4 id="navbarStart">What do you want to eat?</h4>
+            </li>
+            
+            <!-- * removed [kt]  -->
+                  <!-- <div class="row">
+                    <form class="col s12">
+                            <div class="searchFood">
+                                <div class="input-field col s6">
+                                    <input id="input_text" type="text" data-length="100">
+                                    <label for="input_text">Enter food here</label>
+                                </div>
+                            </div>      
+                    </form>
+                  </div>    -->
+
+    <!-- alex  -->
+    <div class="">
+      <form>
+          <div class="input-field">
+              <input id="Food" type="text">
+              <label for="Food">Enter food here</label>
+          </div>      
+      </form>
+    </div>    
+            <!-- * removed [kt]  -->
+                <!-- <div class="input-field col s12">
+                        <select multiple>
+                        <option value="" disabled selected>Diet</option>
+                        <option value="1">Gluten Free</option>
+                        <option value="2">Ketogenic</option>
+                        <option value="3">Vegetarian</option>
+                        <option value="4">Lacto-Vegetarian</option>
+                        <option value="5">Ovo-Vegetarianleo</option>
+                        <option value="6">Vegan</option>
+                        <option value="7">Pescetarian</option>
+                        <option value="8">Paleo</option>
+                        <option value="9">Primal</option>
+                        <option value="10">Whole30</option>
+                    </select>
+                    <label></label>
+                </div> -->
+
+    <!-- alex  -->
+    <div class="input-field">
+        <select id="diets">
+            <option value="">Any</option>
+            <option value="Gluten Free">Gluten Free</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Paleo">Paleo</option>
+            <option value="Pescatarian">Pescatarian</option>
+            <option value="Ketogenic">Ketogenic</option>
+            <option value="Primal">Primal</option>
+            <option value="Lacto-Vegetarian">Lacto-Vegetarian</option>
+            <option value="Ovo-Vegetarian">Ovo-Vegetarian</option>
+            <option value="Whole30">Whole30</option>
+        </select>
+        <label>Diet</label>
+    </div>            
+
+
+            <!-- * removed [kt]  -->
+                <!-- <div class="input-field col s12">
+                    <select multiple>
+                        <option value="" disabled selected>Allergy</option>
+                        <option value="1">Dairy</option>
+                        <option value="2">Egg</option>
+                        <option value="3">Gluten</option>
+                        <option value="3">Grain</option>
+                        <option value="3">Peanut</option>
+                        <option value="3">Seafood</option>
+                        <option value="3">Shellfish</option>
+                        <option value="3">Soy</option>
+                        <option value="3">Sulfite</option>
+                        <option value="3">Tree Nut</option>
+                        <option value="3">Wheat</option>
+                    </select>
+                    <label></label>
+                </div> -->
+
+    <!-- alex  -->
+    <div class="input-field">
+        <select id="intolerences">
+            <option value="" >None</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Egg">Egg</option>
+            <option value="Gluten">Gluten</option>
+            <option value="Grain">Grain</option>
+            <option value="Peanut">Peanut</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Sesame">Sesame</option>
+            <option value="Shellfish">Shellfish</option>
+            <option value="Soy">Soy</option>
+            <option value="Sulfite">Sulfite</option>
+            <option value="Tree Nut">Tree Nut</option>
+            <option value="Wheat">Wheat</option>
+        </select>
+        <label>Allergies</label>
+    </div>
+    <div class="row">
+        <button class="btn waves-effect waves-light col s8 push-s2" type="submit" name="action" id="food-search">Find food!
+            <i class="material-icons right">send</i>
+        </button>
+    </div>
+    <div>
+      <h6 class="center">Previous searches</h6>
+          <div class="collection" id="search-history"></div>
+    </div>
+    </ul>   
+
+  <!-- extra div  -->
+  <!-- </div>  -->
+
+      <!-- fullscreen html version  side nav anchor-->
+      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><small>Start here  </small> <i class="material-icons">menu</i></a>
+      <!-- side nav anchor  -->
+      <!-- <a href="#" data-target="slide-out" class="sidenav-fixed"><i class="material-icons"> ||| </i></a> -->
+
+</section>
+
+<!-- main content start  -->
+<main>
+
+  <!-- splash div -->
+   <div class="splash" id="splashPG">        
+      <!-- Parallax div, for more info https://materializecss.com/parallax.html  -->
+      <div class="parallax-container">
+            <div class="parallax">
+              <img src="./assets/images/pepperoni-pizza-with-basil-leaves-1260968.jpg" alt="" class="responsive-img">
+            </div>
+        </div>
+        <div class="section white">
+          <div class="row container">
+            <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">local_dining</a></i></a> 
+              <h2 class="header" id="findMenu">Find your menu!</h2> 
+              <p>Choose from a variety of menus, from American, Mexican, Indian, Chinese foods to vegetarian or gluten-free, or other food selections.</p>
+              <!-- <p class="grey-text text-darken-3 lighten-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, illo dictas. Culpa repellendus laborum non quaerat molestias sed nemo soluta eum doloribus ratione consectetur, porro perferendis provident maiores? Dolores, nobis..</p> -->
+            </div>
+        </div>
+        <div class="parallax-container">
+              <div class="parallax">
+                <img src="./assets/images/variety-of-vegetables-1458694.jpg" alt="" class="responsive-img">                
+              </div>
+          </div>
+          <div class="section white">
+            <div class="row container">          
+              <div class="foodicon"><a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">directions_car</i></a> </div>
+                <h2 class="header" id="map">Map to food</h2>  
+                <p>Tired of cooking, just want the closest eatery?  Select a city and we'll find you the restaurants most nearby you that match your food choice.</p>
+              </div>
+          </div>
+        <!-- Parallax Section end  -->  
+    </div>
+
+
+    <!-- food div -->
+            <!-- <div class="searchFoods" id="resultsPG">
+                <section class="content">
+                    <div class="menuResults">
+                        <h3>Menu options per your selection</h3>        
+                        <div class="grid-container-fluid">
+                            <div class="grid-item">1</div>
+                            <div class="grid-item">2</div>
+                            <p></p>
+                            <div class="grid-item">3</div>
+                            <div class="grid-item">4</div>
+                            <p></p>
+                            <div class="grid-item">5</div>
+                            <div class="grid-item">6</div>
+                        </div>
+                </section>
+            <div> -->
+
+  <!-- alex  -->
+  <main>
+    <div class="row">
+        <section class="col s2"></section>
+        <section class="col s9 push-s1 center">
+            <section class="content row">
+                <div class="menuResults col s6">
+                    <h4 class="center">Menu options</h4>
+                      <div id="results-at-home">
+                      </div>
+                </div>
+                <!-- <div class="col s6" id="locationResults">
+                    <h4 class="center">Restaurant near you</h4>
+                </div> -->
+            </section>
+       </section>
+    </div> 
+                  <br>
+
+                  <!-- map div -->
+                  <div class="searchMap" id="infoPG">
+                    <section class="content">
+                        <div class="locationResults">
+                            <h3>Restaurant locations near you</h3>
+                            <div class="grid-container-fluid">
+                              <!-- placeholder  -->
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.345352426755!2d-122.35072529914952!3d47.61941774498407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490151f4ed5b7f9%3A0xdb2ba8689ed0920d!2sSpace%20Needle!5e0!3m2!1sen!2sus!4v1588048251643!5m2!1sen!2sus"
+                                      frameborder="0"
+                                      height="400"
+                                      width="400"
+                                      style="border:0"
+                                      allowfullscreen
+                                  ></iframe>
+                                  <!-- add grid-items here:   -->
+                                      <!-- <div class="grid-item">1</div> -->
+                            </div>
+                        </div>
+                    </section>
+                  <div>
+
+</main>
+<!-- main end  -->
+
+
+<!-- footer  -->
+<footer>
+    <div>
+      &copy; 2020 JAK Eats, Inc.
+    </div>
+</footer>
+   
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="config.js"></script>
+      <script src="./assets/js/script.js"></script>
+      <script src="./assets/js/scriptA.js"></script>
+      <!-- <script src="./assets/js/scriptJ.js"></script> -->
+</body>
+</html>
