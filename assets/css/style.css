@@ -333,3 +333,12 @@ p {
   min-height: 50px;
   background: transparent;
 } */
+
+
+/* ------------------GOOGLE MAPS API-------------------*/
+#GoogleMap {
+  height: 900px;
+  width: 75%;
+  float: right;
+  border: crimson solid 5px;
+}
