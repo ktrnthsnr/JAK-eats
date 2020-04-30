@@ -1,11 +1,5 @@
 // ktrnthsnr's section 
 
-//submit clicks
-function redirectOnClick() {     
-  // window.location.href = "search.html";  
-  window.location.href = "index.html";   //updated to same page. Will add\remove div's rather than go through multiple pages.
-}
-
 //parallax initialization
   $(document).ready(function(){
     $('.parallax').parallax();
