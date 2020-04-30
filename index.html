@@ -16,110 +16,109 @@
 
   <header class="header row center">
     <div class="col m0 l2"></div>
-    <div class="col s12 m12 l9 push-l1"><h1><a href="./index.html">JAK Eats</a> </h1> </div>
+    <div class="col s12 m12 l9 xl10 push-l1"><h1><a href="./index.html">JAK Eats</a> </h1> </div>
+    <div class="divider col s12"></div>
     <div class="col m0 l2"></div>
-    <div class="col s12 m12 l9 push-l1"><h3> <a href="#findMenu">food menu |</a> <a href="#map"> eatery nearby</a> </h3></div>
+    <div class="col s12 m12 l9 xl10 push-l1"><h4><a href="#results-at-home">Food Menu</a> | <a href="#map">Eatery Nearby</a></h4></div>
   </header>
-  
-  <section class= "navbar"> 
-    <!-- <ul id="slide-out" class="sidenav sidenav-fixed"> -->
-    <ul id="slide-out" class="sidenav sidenav-fixed">
-          <!-- <h4>JAK Eats</h4> -->
-            <li><div class="user-view">
-                  <div class="background">            
-                      <img src="assets/images/cooking-dishes-herb-kitchen-1109197.jpg">
-                  </div>
-                  <img class="circle" src="assets/images/cooking-dishes-herb-kitchen-1109197.jpg"></a>
-              </div>
-              <h4 id="navbarStart">What do you want to eat?</h4>
-            </li>
+
+  <section id="slide-out" class="sidenav sidenav-fixed"> 
+    <div class="container">
+      <br>
+      <div>
+        <div class="center">
+          <img class="circle z-depth-3" src="assets/images/cooking-dishes-herb-kitchen-1109197.jpg" style="height: 150px; width: 150px;"></a>
+        </div>
+        <h6 id="navbarStart">What do you want to eat?</h6>
+      </div>
 
 
-    <!-- alex  -->
-    <div class="">
-      <form>
-          <div class="input-field">
-              <input id="Food" type="text">
-              <label for="Food">Enter food here</label>
-          </div>      
-      </form>
-    </div>    
-              
+      <!-- alex  -->
+      <div class="">
+        <form>
+            <div class="input-field">
+                <input id="Food" type="text">
+                <label for="Food">Enter food here</label>
+            </div>      
+        </form>
+      </div>    
+                
 
-    <!-- alex  -->
-    <div class="input-field">
-        <select id="diets">
-            <option value="">Any</option>
-            <option value="Gluten Free">Gluten Free</option>
-            <option value="Vegetarian">Vegetarian</option>
-            <option value="Vegan">Vegan</option>
-            <option value="Paleo">Paleo</option>
-            <option value="Pescatarian">Pescatarian</option>
-            <option value="Ketogenic">Ketogenic</option>
-            <option value="Primal">Primal</option>
-            <option value="Lacto-Vegetarian">Lacto-Vegetarian</option>
-            <option value="Ovo-Vegetarian">Ovo-Vegetarian</option>
-            <option value="Whole30">Whole30</option>
-        </select>
-        <label>Diet</label>
-    </div>            
-           
-    <!-- alex  -->
-    <div class="input-field">
-        <select id="intolerences">
-            <option value="" >None</option>
-            <option value="Dairy">Dairy</option>
-            <option value="Egg">Egg</option>
-            <option value="Gluten">Gluten</option>
-            <option value="Grain">Grain</option>
-            <option value="Peanut">Peanut</option>
-            <option value="Seafood">Seafood</option>
-            <option value="Sesame">Sesame</option>
-            <option value="Shellfish">Shellfish</option>
-            <option value="Soy">Soy</option>
-            <option value="Sulfite">Sulfite</option>
-            <option value="Tree Nut">Tree Nut</option>
-            <option value="Wheat">Wheat</option>
-        </select>
-        <label>Allergies</label>
+      <!-- alex  -->
+      <div class="input-field">
+          <select id="diets">
+              <option value="">Any</option>
+              <option value="Gluten Free">Gluten Free</option>
+              <option value="Vegetarian">Vegetarian</option>
+              <option value="Vegan">Vegan</option>
+              <option value="Paleo">Paleo</option>
+              <option value="Pescatarian">Pescatarian</option>
+              <option value="Ketogenic">Ketogenic</option>
+              <option value="Primal">Primal</option>
+              <option value="Lacto-Vegetarian">Lacto-Vegetarian</option>
+              <option value="Ovo-Vegetarian">Ovo-Vegetarian</option>
+              <option value="Whole30">Whole30</option>
+          </select>
+          <label>Diet</label>
+      </div>            
+            
+      <!-- alex  -->
+      <div class="input-field">
+          <select id="intolerences">
+              <option value="" >None</option>
+              <option value="Dairy">Dairy</option>
+              <option value="Egg">Egg</option>
+              <option value="Gluten">Gluten</option>
+              <option value="Grain">Grain</option>
+              <option value="Peanut">Peanut</option>
+              <option value="Seafood">Seafood</option>
+              <option value="Sesame">Sesame</option>
+              <option value="Shellfish">Shellfish</option>
+              <option value="Soy">Soy</option>
+              <option value="Sulfite">Sulfite</option>
+              <option value="Tree Nut">Tree Nut</option>
+              <option value="Wheat">Wheat</option>
+          </select>
+          <label>Allergies</label>
+      </div>
+      <div class="row">
+          <button class="btn waves-effect waves-light col s8 push-s2" type="submit" name="action" id="food-search" tabindex="-1">Find food!
+              <i class="material-icons right">send</i>
+          </button>
+      </div>
+      <div>
+        <h6 class="center">Previous searches</h6>
+            <div class="collection" id="search-history"></div>
+      </div>  
+
+        <!-- fullscreen html version  side nav anchor-->
+        <!-- side nav anchor  -->
+        <!-- <a href="#" data-target="slide-out" class="sidenav-fixed"><i class="material-icons"> ||| </i></a> -->
     </div>
-    <div class="row">
-        <button class="btn waves-effect waves-light col s8 push-s2" type="submit" name="action" id="food-search" tabindex="-1">Find food!
-            <i class="material-icons right">send</i>
-        </button>
-    </div>
-    <div>
-      <h6 class="center">Previous searches</h6>
-          <div class="collection" id="search-history"></div>
-    </div>
-    </ul>   
-
-      <!-- fullscreen html version  side nav anchor-->
-      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-large"><small>Start here  </small> <i class="material-icons">menu</i></a>
-      <!-- side nav anchor  -->
-      <!-- <a href="#" data-target="slide-out" class="sidenav-fixed"><i class="material-icons"> ||| </i></a> -->
-
   </section>
 
   <!-- main content start  -->
   <!-- splash div -->
   <div class="splash" id="splashPG">        
     <!-- Parallax div, for more info https://materializecss.com/parallax.html  -->
-    <div class="parallax-container" style="height: 200px;">
-              <div class="parallax">
-                <img src="./assets/images/variety-of-vegetables-1458694.jpg" alt="" class="responsive-img">                
-              </div>
+      <div class="parallax-container z-depth-3" style="height: 200px;">
+        <div class="parallax">
+          <img src="./assets/images/variety-of-vegetables-1458694.jpg" alt="" class="responsive-img">                
+        </div>
       </div>
       <div class="section white center">
-            <div class="row container">
+            <div class="row">
               <div class="col m0 l2"></div>
-              <div class="foodicon col s12 m12 l9 push-l1"><a class="btn-floating btn-large waves-effect waves-light red">
-                <i class="material-icons">directions_car</i>
+              <div class="foodicon col s12 m12 l9 xl10 push-l1"><a href="#" data-target="slide-out"  class="btn-floating btn-large waves-effect waves-light red sidenav-trigger">
+                <i class="material-icons">menu</i>
               </a> </div>
               <div class="col m0 l2"></div>
-              <div class="col s12 m12 l9 push-l1">
-                <h2 class="header" id="map">Map to food</h2>
-                <p>Tired of cooking, just want the closest eatery?  Select a city and we'll find you the restaurants most nearby you that match your food choice.</p>
+              <div class="col s12 m12 l9 xl10 push-l1">
+                <h3 class="header" id="map">Looking For Food Ideas</h3>
+                <p>Search a meal and find recipies, or local restaurants that specialize in that food!
+                  <br>To get started just type a food in the side bar.
+                  <br>If you don't see a sidebar just hit the <i class="tiny material-icons">menu</i> and you'll be on your way!
+                </p>
               </div>
             </div>
       </div>
@@ -130,14 +129,14 @@
   <main>
     <div class="row">
         <section class="col m0 l2"></section>
-          <section class="col s12 m12 l9 push-l1">
+          <section class="col s12 m12 l9 xl10 push-l1">
             <section class="content row">
-                <div class="menuResults col s6">
+                <div class="menuResults col s12 l6">
                     <h4 class="center">Menu options</h4>
                       <div id="results-at-home">
                       </div>
                 </div>
-                  <div id="infoPG" class="locationResults col s6">
+                  <div id="infoPG" class="locationResults col s12 l6">
                   <h4 class="center">Restaurants closeby</h4>
                       <!-- josh   -->
                       <div class="center" id="GoogleMap"></div>
@@ -151,10 +150,12 @@
 
 
   <!-- footer  -->
-  <footer>
-    <div>
+  <footer class="row center">
+    <div class="col m0 l2"></div>
+    <div class="col s12 m12 l9 xl10 push-l1">
       &copy; 2020 JAK Eats, Inc.
     </div>
+  
   </footer>
    
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
