@@ -1,4 +1,4 @@
-﻿# JAK-eats
+# JAK-eats
 
 ## Description
 Online menu and restaurant options, with mapping to nearby eateries.
