@@ -66,7 +66,7 @@ $(document).ready(function(){
 
 
       // fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=5" + "&" + key).then(function(response) {
-      fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=1" + "&" + myKey).then(function(response) {    //change limit here, number=1
+      fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=5" + "&" + myKey).then(function(response) {    //change limit here, number=1
           if (response.ok) {
               response.json().then(function(data) {
                   var listEl = document.createElement("ul");
