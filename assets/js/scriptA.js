@@ -49,7 +49,7 @@ var foodApiSearch = function(userSearch) {
     var IntolCheck = document.querySelector('#intolerences').value;
 
     // fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=5" + "&" + key).then(function(response) {
-    fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=3" + "&" + myKey).then(function(response) {    //change limit here, number=1
+    fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=1" + "&" + myKey).then(function(response) {    //change limit here, number=1
         if (response.ok) {
             response.json().then(function(data) {
                 var listEl = document.createElement("ul");
@@ -143,6 +143,7 @@ $(searchHistory).on("click", "a", function(event) {
     event.preventDefault();
     var buttonEl = event.target.textContent;
     foodApiSearch(buttonEl);
+                         document.getElementById("#findMenu").focus();    //added focus to page element [kt]
 })
 
 loadSearchHistory();

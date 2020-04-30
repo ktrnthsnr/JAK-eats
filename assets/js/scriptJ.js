@@ -1,14 +1,21 @@
+   // * google maps token
+    var theKeyMaps = {
+        apiKeyMaps : 'AIzaSyB9uuQ3bbZMr7pi4_lpwN6ma3OFCm7pIdk',
+    }
 /* ------------------GOOGLE MAPS API-------------------*/
 
 var x = document.getElementById("map1");
-var gMapsAPI = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?rankby=distance&type=restaurant&key=&opennow"
+   var gMapsAPI = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?rankby=distance&type=restaurant&key=AIzaSyB9uuQ3bbZMr7pi4_lpwN6ma3OFCm7pIdk&opennow"
+// var gMapsAPI = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?rankby=distance&type=restaurant&key=AIzaSyB9uuQ3bbZMr7pi4_lpwN6ma3OFCm7pIdk&opennow&location=51.503323,-0.119543
 var userInput1 = document.getElementById('input_text');
-var userInput = "burger";
+// var userInput = "burger";
+var userInput = document.querySelector('#Food').value;
 var proxyurl = "https://cors-anywhere.herokuapp.com/";
 var nearbyLocations = [];
 var myLatitude;
 var myLongitude;
-var submitBtn = document.getElementById('SubmitFood');
+// var submitBtn = document.getElementById('SubmitFood'); 
+var submitBtn = document.getElementById('food-search'); 
 
 var location0;
 var location1;
@@ -102,7 +109,8 @@ var FoodNearMe = function (apiString) {
       var script = document.createElement('script');
       script.defer = true;
       script.async = true;
-      script.src = 'https://maps.googleapis.com/maps/api/js?key=&callback=initMap';
+    //   script.src = 'https://maps.googleapis.com/maps/api/js?key=&callback=initMap';
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB9uuQ3bbZMr7pi4_lpwN6ma3OFCm7pIdk&callback=initMap';
 
       // Append the 'script' element to 'head'
       document.head.appendChild(script);
