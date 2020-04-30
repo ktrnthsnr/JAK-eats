@@ -64,9 +64,6 @@
       var dietsCheck = document.querySelector('#diets').value;
       var IntolCheck = document.querySelector('#intolerences').value;
 
-      var parallaxDivsDelete = document.querySelector('#splashPG');
-      parallaxDivsDelete.innerHTML = "";
-
 
       // fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=5" + "&" + key).then(function(response) {
       fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=1" + "&" + myKey).then(function(response) {    //change limit here, number=1
