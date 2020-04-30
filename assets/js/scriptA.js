@@ -1,3 +1,10 @@
+//[kt] spoonacular token referenced from a config.js file
+
+var myKey = theKey.apiKey;      //update to 'myKey' variable below
+console.log(myKey);
+
+/* ------------------[Alex] Spoonacular API ------------------ */
+
 var listId = 0
 var listFooditems = {};
 var searchItems = document.querySelector('#food-search');
@@ -5,10 +12,7 @@ var searchHistory = document.querySelector('#search-history');
 var searchResultsHome = document.querySelector('#results-at-home');
 // var key =  '<replaced with token, see config.js>';   //replace API key with token. done.
 
-        //[kt] spoonacular token referenced from a config.js file
-        var myKey = theKey.apiKey;      //update to 'myKey' variable below
-        console.log(myKey);
-
+ 
 var saveSearch = function(event) {
     event.preventDefault();
     var userFoodInput = document.querySelector('#Food').value;
@@ -143,7 +147,7 @@ $(searchHistory).on("click", "a", function(event) {
     event.preventDefault();
     var buttonEl = event.target.textContent;
     foodApiSearch(buttonEl);
-                         document.getElementById("#findMenu").focus();    //added focus to page element [kt]
+                        //  document.getElementById("#findMenu").focus();    //added focus to page element [kt]
 })
 
 loadSearchHistory();

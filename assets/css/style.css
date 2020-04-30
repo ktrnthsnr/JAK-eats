@@ -263,11 +263,12 @@ footer a {
 
 /* ------------------GOOGLE MAPS API-------------------*/
 
+
 #GoogleMap {
-  /* height: 900px; */
+  height: 900px;
   width: 75%;
   float: right;
   border: black 1px;
   max-height: 400px;
-  /* min-width: 400px;  */
+  min-width: 400px;
 }

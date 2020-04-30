@@ -1,12 +1,13 @@
-   // * google maps token
-    var theKeyMaps = {
-        apiKeyMaps : 'AIzaSyB9uuQ3bbZMr7pi4_lpwN6ma3OFCm7pIdk',
-    }
-/* ------------------GOOGLE MAPS API-------------------*/
+// [kt]  google maps token
+
+     var myKeyMaps = theKeyMaps.apiKeyMaps;
+        console.log(theKeyMaps);
+
+/* ------------------ [Josh] GOOGLE MAPS API-------------------*/
 
 var x = document.getElementById("map1");
-   var gMapsAPI = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?rankby=distance&type=restaurant&key=AIzaSyB9uuQ3bbZMr7pi4_lpwN6ma3OFCm7pIdk&opennow"
-// var gMapsAPI = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?rankby=distance&type=restaurant&key=AIzaSyB9uuQ3bbZMr7pi4_lpwN6ma3OFCm7pIdk&opennow&location=51.503323,-0.119543
+var gMapsAPI = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?rankby=distance&type=restaurant&key=" + myKeyMaps + "&opennow";
+// var gMapsAPI = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?rankby=distance&type=restaurant&key=<apikey>&opennow&location=51.503323,-0.119543
 var userInput1 = document.getElementById('input_text');
 // var userInput = "burger";
 var userInput = document.querySelector('#Food').value;
@@ -110,7 +111,7 @@ var FoodNearMe = function (apiString) {
       script.defer = true;
       script.async = true;
     //   script.src = 'https://maps.googleapis.com/maps/api/js?key=&callback=initMap';
-      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB9uuQ3bbZMr7pi4_lpwN6ma3OFCm7pIdk&callback=initMap';
+      script.src = "https://maps.googleapis.com/maps/api/js?key=" + myKeyMaps + "&callback=initMap";
 
       // Append the 'script' element to 'head'
       document.head.appendChild(script);
