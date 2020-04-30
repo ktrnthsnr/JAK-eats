@@ -1,9 +1,10 @@
-*{
-  font-family: 'Lobster', 
-}
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#food-search, .input-field {
+  margin: 30px 0;
 }
 
 /* ------------------GOOGLE MAPS API-------------------*/
