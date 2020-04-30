@@ -34,7 +34,7 @@ function redirectOnClick() {
   var saveSearch = function(event) {
       event.preventDefault();
       var userFoodInput = document.querySelector('#Food').value;
-      var userFoodItem = userFoodInput.toLowerCase();
+      userInput = userFoodInput.toLowerCase();
       logSearch(userFoodItem);
       foodApiSearch(userFoodItem);
   }
@@ -69,6 +69,10 @@ function redirectOnClick() {
       searchResultsHome.innerHTML = ""
       var dietsCheck = document.querySelector('#diets').value;
       var IntolCheck = document.querySelector('#intolerences').value;
+
+      var parallaxDivsDelete = document.querySelector('#splashPG');
+      parallaxDivsDelete.innerHTML = "";
+
 
       // fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=5" + "&" + key).then(function(response) {
       fetch(apiUrl + userSearch + "&diet=" + dietsCheck + "&intolerances=" + IntolCheck + "&number=1" + "&" + myKey).then(function(response) {    //change limit here, number=1
@@ -163,8 +167,8 @@ function redirectOnClick() {
   $(searchHistory).on("click", "a", function(event) {
       event.preventDefault();
       var buttonEl = event.target.textContent;
+      userInput = buttonEl
       foodApiSearch(buttonEl);
-                          //  document.getElementById("#findMenu").focus();    //added focus to page element [kt]
   })
 
   loadSearchHistory();
@@ -190,7 +194,7 @@ function redirectOnClick() {
   var gMapsAPI = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?rankby=distance&type=restaurant&key=" + myKeyMaps + "&opennow";
     var userInput1 = document.getElementById('input_text');
   // var userInput = "burger";
-  var userInput = document.querySelector('#Food').value;
+  var userInput = "";
   var proxyurl = "https://cors-anywhere.herokuapp.com/";
   var nearbyLocations = [];
   var myLatitude;
