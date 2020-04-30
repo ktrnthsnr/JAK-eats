@@ -1,3 +1,20 @@
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 #food-search, .input-field {
-  margin: 25px 0;
+  margin: 30px 0;
+}
+
+/* ------------------GOOGLE MAPS API-------------------*/
+
+
+#GoogleMap {
+  height: 900px;
+  width: 75%;
+  float: right;
+  border: black 1px;
+  max-height: 400px;
+  min-width: 400px;
 }
