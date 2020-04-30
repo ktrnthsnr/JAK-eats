@@ -1,4 +1,4 @@
-# JAK-eats
+# [JAK-eats](https://ktrnthsnr.github.io/JAK-eats)
 
 ## Description
 Online menu and restaurant options, with mapping to nearby eateries.
