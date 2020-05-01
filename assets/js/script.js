@@ -25,12 +25,20 @@ $(document).ready(function(){
   // var key =  '<replaced with token, see config.js>';   //replace API key with token. done.
 
   
+//   var saveSearch = function(event) {
+//       event.preventDefault();
+//       var userFoodInput = document.querySelector('#Food').value;
+//       userInput = userFoodInput.toLowerCase();
+//       logSearch(userFoodItem);
+//       foodApiSearch(userFoodItem);
+//   }
+
   var saveSearch = function(event) {
-      event.preventDefault();
-      var userFoodInput = document.querySelector('#Food').value;
-      userInput = userFoodInput.toLowerCase();
-      logSearch(userFoodItem);
-      foodApiSearch(userFoodItem);
+    event.preventDefault();
+    var userFoodInput = document.querySelector('#Food').value;
+    var userFoodItem = userFoodInput.toLowerCase();
+    logSearch(userFoodItem);
+    foodApiSearch(userFoodItem);
   }
 
   var logSearch = function (food) {
