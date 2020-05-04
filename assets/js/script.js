@@ -39,7 +39,6 @@ var saveSearch = function (event) {
     var userFoodItem = userFoodInput.toLowerCase();
     logSearch(userFoodItem);
     foodApiSearch(userFoodItem);
-    userFoodInput.value = '';
 }
 
 var logSearch = function (food) {
@@ -164,6 +163,7 @@ var loadSearchHistory = function () {
 }
 
 searchItems.addEventListener("click", saveSearch);
+
 $(searchHistory).on("click", "a", function (event) {
     event.preventDefault();
     var buttonEl = event.target.textContent;
@@ -236,9 +236,10 @@ var marker0, marker1, marker2, marker3, marker4;
 
 
 function getLocation(historyItem) {
+    window.google = undefined;
+
     if (navigator.geolocation) {
         prevItem = historyItem;
-        console.log(prevItem);
         navigator.geolocation.getCurrentPosition(showPosition);
     } else {
         x.innerHTML = "Geolocation is not supported by this browser.";
@@ -255,14 +256,14 @@ function showPosition(position) {
 
 var setupAPI = function (userLat, userLon) {
 
-    var userFoodInput = document.querySelector('#Food').value;
+    var userFoodInput = document.querySelector('#Food');
 
-    if (userFoodInput !== null && userFoodInput !== '') {
-        gMapsAPI += ("&keyword=" + userFoodInput + "&location=" + userLat + "," + userLon);
-        //FoodNearMe(gMapsAPI);
+    if (userFoodInput.value !== null && userFoodInput.value !== '') {
+        gMapsAPI += ("&keyword=" + userFoodInput.value + "&location=" + userLat + "," + userLon);
+        FoodNearMe(gMapsAPI);
+        userFoodInput.value = '';
     } else {
         gMapsAPI += ("&keyword=" + prevItem + "&location=" + userLat + "," + userLon);
-        console.log(gMapsAPI);
         FoodNearMe(gMapsAPI);
 
     }
@@ -275,10 +276,7 @@ var FoodNearMe = function (apiString) {
     fetch(proxyurl + apiString).then(function (response) {
         response.json().then(function (JSONresponse) {
 
-            // console.log(apiString);
-            //console.log(JSONresponse.results[0].geometry.location.lat);
-            //console.log(JSONresponse.results[0].geometry.location.lng);
-
+            console.log(apiString);
 
             for (i = 0; i < 5; i++) {
 
@@ -313,8 +311,6 @@ var FoodNearMe = function (apiString) {
     })
 }
 window.initMap = function () {
-
-
 
     var map = new google.maps.Map(
         document.getElementById('GoogleMap'), {
@@ -388,7 +384,7 @@ window.initMap = function () {
         infowindow5.close();
     });
 
+    this.nearbyLocations = [];
 };
-
 
 submitBtn.addEventListener('click', getLocation);
