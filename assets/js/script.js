@@ -168,7 +168,7 @@ $(searchHistory).on("click", "a", function (event) {
     event.preventDefault();
     var buttonEl = event.target.textContent;
     userInput = buttonEl
-    //foodApiSearch(buttonEl);
+    foodApiSearch(buttonEl);
 
     window.google = undefined;
     var GMapSection = document.getElementById("GMapSection");
