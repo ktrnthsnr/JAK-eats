@@ -38,7 +38,7 @@ var saveSearch = function (event) {
     var userFoodInput = document.querySelector('#Food').value;
     var userFoodItem = userFoodInput.toLowerCase();
     logSearch(userFoodItem);
-    //foodApiSearch(userFoodItem);
+    foodApiSearch(userFoodItem);
     userFoodInput.value = '';
 }
 
@@ -168,25 +168,25 @@ $(searchHistory).on("click", "a", function (event) {
     event.preventDefault();
     var buttonEl = event.target.textContent;
     userInput = buttonEl
-    //foodApiSearch(buttonEl);
+    foodApiSearch(buttonEl);
 
     var GMapSection = document.getElementById("GMapSection");
     var GMapDynamic = document.getElementById("DynamicGMap");
-    
-    if (GMapDynamic !== null && GMapDynamic !== ''){
-    GMapSection.removeChild(GMapDynamic);
+
+    if (GMapDynamic !== null && GMapDynamic !== '') {
+        GMapSection.removeChild(GMapDynamic);
     }
-    var removeScriptTag = document.querySelectorAll('script[type="text/javascript"]') ;
-              console.log(removeScriptTag);
-              if (removeScriptTag !== null && removeScriptTag !== ''){
-              removeScriptTag.remove;
-              }
+    var removeScriptTag = document.querySelectorAll('script[type="text/javascript"]');
+    console.log(removeScriptTag);
+    if (removeScriptTag !== null && removeScriptTag !== '') {
+        removeScriptTag.remove;
+    }
 
-              var GMapParent = document.getElementById('GoogleMap');
-              GMapParent.innerHTML = '';
-              GMapParent.removeAttribute('style');
+    var GMapParent = document.getElementById('GoogleMap');
+    GMapParent.innerHTML = '';
+    GMapParent.removeAttribute('style');
 
-              
+
 
     nearbyLocations = [];
     getLocation(buttonEl);
@@ -247,7 +247,7 @@ function getLocation(historyItem) {
 function showPosition(position) {
     myLatitude = position.coords.latitude;
     myLongitude = position.coords.longitude;
-    console.log(myLatitude,myLongitude)
+    console.log(myLatitude, myLongitude)
 
     setupAPI(myLatitude, myLongitude);
 }
@@ -256,15 +256,14 @@ var setupAPI = function (userLat, userLon) {
 
     var userFoodInput = document.querySelector('#Food').value;
 
-    if (userFoodInput !== null && userFoodInput !== ''){
-    gMapsAPI += ("&keyword=" + userFoodInput + "&location=" + userLat + "," + userLon);
-    //FoodNearMe(gMapsAPI);
-    }
-    else {
+    if (userFoodInput !== null && userFoodInput !== '') {
+        gMapsAPI += ("&keyword=" + userFoodInput + "&location=" + userLat + "," + userLon);
+        //FoodNearMe(gMapsAPI);
+    } else {
         gMapsAPI += ("&keyword=" + prevItem + "&location=" + userLat + "," + userLon);
         console.log(gMapsAPI);
         FoodNearMe(gMapsAPI);
-        
+
     }
 
     //Remove parameters from the API call for search history clicks
@@ -279,7 +278,7 @@ var FoodNearMe = function (apiString) {
             //console.log(JSONresponse.results[0].geometry.location.lat);
             //console.log(JSONresponse.results[0].geometry.location.lng);
 
-            
+
             for (i = 0; i < 5; i++) {
 
                 var FoodPlace = {
@@ -288,18 +287,18 @@ var FoodNearMe = function (apiString) {
                     vicinity: JSONresponse.results[i].vicinity,
                     lat: JSONresponse.results[i].geometry.location.lat,
                     lng: JSONresponse.results[i].geometry.location.lng
-                  }
-                  nearbyLocations.push(FoodPlace);
+                }
+                nearbyLocations.push(FoodPlace);
             }
 
             location5 = {
                 lat: myLatitude,
                 lng: myLongitude
-              };
+            };
 
             // Create the script tag, set the appropriate attributes
             var GMapSection = document.querySelector('#GMapSection');
-        
+
             var script = document.createElement('script');
             script.defer = true;
             script.async = true;
@@ -314,7 +313,7 @@ var FoodNearMe = function (apiString) {
 }
 window.initMap = function () {
 
-    
+
 
     var map = new google.maps.Map(
         document.getElementById('GoogleMap'), {
@@ -323,72 +322,70 @@ window.initMap = function () {
             mapTypeId: google.maps.MapTypeId.ROADMAP
 
         });
-    
-        var markers = [];
+
+    var markers = [];
     var infoTxt = [];
 
-    for (i=0;i<this.nearbyLocations.length;i++) {
+    for (i = 0; i < this.nearbyLocations.length; i++) {
 
-        this ["locationName" + [i] ] = nearbyLocations[i].name;
-        this ["locationRating" + [i] ] = nearbyLocations[i].rating;
-        this ["locationAddy" + [i] ] = nearbyLocations[i].vicinity;
-        this ["location" + [i] ] = nearbyLocations[i].lat + ',' + nearbyLocations[i].lng;
-  
-      
-        infoTxt[i] =  '<center><h5>' + this["locationName" + [i] ]+ '</h5>' + '<br>' +
-        'Rating: ' + this["locationRating" + [i] ] + '<br>' +
-        '' + this ["locationAddy" + [i] ] + '</center>';
-  
-        var infowindow =  new google.maps.InfoWindow({
-          content: infoTxt[i]
-      });
-  
-  
+        this["locationName" + [i]] = nearbyLocations[i].name;
+        this["locationRating" + [i]] = nearbyLocations[i].rating;
+        this["locationAddy" + [i]] = nearbyLocations[i].vicinity;
+        this["location" + [i]] = nearbyLocations[i].lat + ',' + nearbyLocations[i].lng;
+
+
+        infoTxt[i] = '<center><h5>' + this["locationName" + [i]] + '</h5>' + '<br>' +
+            'Rating: ' + this["locationRating" + [i]] + '<br>' +
+            '' + this["locationAddy" + [i]] + '</center>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: infoTxt[i]
+        });
+
+
         markers[i] = new google.maps.Marker({
-          position: 
-          {
-            lat: nearbyLocations[i].lat,
-            lng: nearbyLocations[i].lng
-          },
-          map: map,
-          infowindow: infowindow
+            position: {
+                lat: nearbyLocations[i].lat,
+                lng: nearbyLocations[i].lng
+            },
+            map: map,
+            infowindow: infowindow
         });
-  
-  
-         markers[i].addListener('mouseover', function (content) {
-          this.infowindow.open(map,this);
-  
-        }); 
-  
+
+
+        markers[i].addListener('mouseover', function (content) {
+            this.infowindow.open(map, this);
+
+        });
+
         markers[i].addListener('mouseout', function () {
-          this.infowindow.close();
+            this.infowindow.close();
         });
 
-      }
+    }
 
-/*----------------CREATE HOME MARKER-----------------*/
-      var marker5 = new google.maps.Marker({
-        position: 
-        {
+    /*----------------CREATE HOME MARKER-----------------*/
+    var marker5 = new google.maps.Marker({
+        position: {
             lat: this.myLatitude,
             lng: this.myLongitude
         },
         map: map,
         icon: homeIcon
-      }); 
+    });
 
-/*----------------HOME MARKER-----------------*/
-  var infowindow5 = new google.maps.InfoWindow({
-    content: '<h5>Home</h5>'
-  });
+    /*----------------HOME MARKER-----------------*/
+    var infowindow5 = new google.maps.InfoWindow({
+        content: '<h5>Home</h5>'
+    });
 
-  marker5.addListener('mouseover', function () {
-    infowindow5.open(map, marker5);
-  });
+    marker5.addListener('mouseover', function () {
+        infowindow5.open(map, marker5);
+    });
 
-  marker5.addListener('mouseout', function () {
-    infowindow5.close();
-  });
+    marker5.addListener('mouseout', function () {
+        infowindow5.close();
+    });
 
 };
 
