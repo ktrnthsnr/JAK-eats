@@ -20,7 +20,7 @@ https://ktrnthsnr.github.io/JAK-eats
 https://github.com/ktrnthsnr/JAK-eats
 
 ## Contributors
-Pops08, Drkeck, ktrnthsnr
+Pops08 (Google Maps API), Drkeck (Spoonacular API), ktrnthsnr (HTML, CSS, API security)
 
 ### ©️2020 Pops08, ktrnthsnr, Drkeck
 
